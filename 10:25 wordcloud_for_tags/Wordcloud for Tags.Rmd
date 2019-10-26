@@ -1,0 +1,30 @@
+---
+title: "Youtube"
+output: html_document
+---
+
+### Wordcloud for Tags
+
+```{r}
+library(genius)
+library(tidyverse)
+library(corpus)
+library(tidytext)
+library(scales)
+library(ggthemes)
+library(DT)
+library(tm)
+library(SnowballC)
+library(wordcloud)
+library(RColorBrewer)
+library(RCurl)
+library(XML)
+library(dplyr)
+```
+
+
+```{r}
+us <- read.csv('USvideos.csv')
+category <- group_by(us, category_id)
+```
+
